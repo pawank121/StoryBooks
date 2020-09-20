@@ -125,7 +125,7 @@ router.put('/:id', ensureAuth, async (req, res) => {
 	try {
 
 		let story = await Story.findById(req.params.id).lean();
-		console.log(story);
+		// console.log(story);
 
 		if (!story) {
 			return res.render('error/404')
